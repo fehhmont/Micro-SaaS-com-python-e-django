@@ -42,3 +42,17 @@ Criar novo app dentro do projeto
     python manage.py startapp nome-do-app
 
     python manage.py start app courses
+
+   
+Criar as migration que sera responsavel em criar a tebelas no banco de dados
+    
+    python manage.py makemigrations
+
+
+Executar as migrations para criar as tebelas no banco de dados
+
+    python manage.py migrate
+
+executar as SEEDS para cadastrar registro de teste.
+
+    python manage.py seed_home
