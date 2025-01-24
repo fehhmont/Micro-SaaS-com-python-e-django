@@ -56,3 +56,20 @@ Executar as migrations para criar as tebelas no banco de dados
 executar as SEEDS para cadastrar registro de teste.
 
     python manage.py seed_home
+
+
+Subir para p Github as alteracoes
+
+    git status   # verifica o estado do repositorio
+    
+    git add .     # adicionar as alteracoes no indice
+
+    git commit - m ""
+
+    git push origin main   # envia as alteracoes para o git
+
+
+
+atualizar o repositirio com o do git 
+
+    git pull origin main
