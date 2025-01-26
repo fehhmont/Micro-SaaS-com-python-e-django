@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class Home(models.Model):
@@ -22,3 +23,22 @@ class Home(models.Model):
     class Meta:
         verbose_name= "Pagina Inicial"
         verbose_name_plural= "Paginas Iniciais"
+        
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=255, verbose_name="nome")
+    email =models.EmailField(verbose_name="E-mail")
+    subject = models.CharField(max_length=255, verbose_name="Assunto")
+    message = models.TextField(verbose_name="Mensagem")
+    
+    creted_at = models.DateTimeField( auto_now_add=True,
+    verbose_name="Data de Criação")
+    update_at = models.DateTimeField(auto_now_add=True,
+    verbose_name="Data de Edção")                                 
+
+    def __str__(self):
+        
+        return self.subject
+    
+    class Meta:
+        verbose_name= "mensagem de contato"
+        verbose_name_plural= "mensagens de contatos"
